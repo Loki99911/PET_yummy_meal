@@ -1,18 +1,18 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = `https://api.apilayer.com/exchangerates_data`;
-const API_KEY = 'NzJxoBDal3rMXth209xmrMTkbPzOx80p';
-// const headers = { apikey: API_KEY };
+axios.defaults.baseURL = `https://api.spoonacular.com`;
+const API_KEY = '773cd4d8f4194722be9afbc56327d906';
+// const headers = { apiKey: API_KEY };
 
 
-export const getSymbols = async () => {
+export const getAllRecipes = async page => {
   const response = await axios.get(
-    `/symbols?apikey=${API_KEY}`
+    `/recipes/complexSearch?apiKey=${API_KEY}&offset=${page}&number=12`
   );
   return response.data;
 };
 
-export const getDate = async (date, base) => {
-  const response = await axios.get(`/${date}?apikey=${API_KEY}&base=${base}`);
-  return response.data;
-};
+// export const getDate = async (date, base) => {
+//   const response = await axios.get(`/${date}?apikey=${API_KEY}&base=${base}`);
+//   return response.data;
+// };

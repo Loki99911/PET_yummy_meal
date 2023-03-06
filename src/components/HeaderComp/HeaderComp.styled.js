@@ -6,12 +6,12 @@ export const Header = styled.header`
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  padding: 8px 0;
-  background-color: lightgreen;
+  padding: 8px 20px;
+  background-color: #009b76;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   border-bottom: 1px solid black;
-/* 
+  /* 
   > nav {
     display: flex;
   } */
@@ -46,7 +46,7 @@ export const UserIcon = styled.span`
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background-color: #f5f6fa;
+  background-color: #009b76;
   margin-right: 12px;
 `;
 

@@ -30,18 +30,18 @@ export const SideBarComp = () => {
     }
   };
   return (
-    <SideBarPlace>
+    <SideBarPlace >
       <SideBarWraper isOpen={isSidebarOpen}>
         <SideBarList>
-          <SideBarItem onClick={handleSidebarToggle} id="nutrients">
-            <SideBarItemTitle>
+          <SideBarItem>
+            <SideBarItemTitle onClick={handleSidebarToggle} id="nutrients">
               <p>Search by nutrients:</p>
               {nutrients ? <BiCaretDown /> : <BiCaretUp />}
             </SideBarItemTitle>
             {nutrients && <NutrientsForm />}
           </SideBarItem>
-          <SideBarItem onClick={handleSidebarToggle} id="ingredients">
-            <SideBarItemTitle>
+          <SideBarItem>
+            <SideBarItemTitle onClick={handleSidebarToggle} id="ingredients">
               <p>Search by ingredients:</p>
               {ingredients ? <BiCaretDown /> : <BiCaretUp />}
             </SideBarItemTitle>

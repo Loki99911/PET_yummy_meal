@@ -19,7 +19,7 @@ export const SideBarItem = styled.li`
   padding: 5px;
   border-radius: 3px;
   border: 1px solid black;
-
+  background-color: white;
 `;
 
 export const SideBarBtn = styled.button`
@@ -32,9 +32,9 @@ export const SideBarBtn = styled.button`
   height: 32px;
 `;
 
-export const SideBarPlace = styled.li`
+export const SideBarPlace = styled.div`
   display: inline-block;
-  position: relative;
+  position:absolute;
   overflow: hidden;
 `;
 

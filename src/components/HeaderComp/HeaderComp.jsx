@@ -1,4 +1,4 @@
-import {useSearchParams} from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import {
   Header,
   Link,
@@ -10,8 +10,6 @@ import {
   UserTextWrap,
 } from './HeaderComp.styled';
 import logoutSvg from '../../Img/Logo.svg';
-
-
 
 export const HeaderComp = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -48,7 +46,9 @@ export const HeaderComp = () => {
           <span>Search</span>
         </button>
       </form>
-
+      <Link to="/register">
+        Login/register
+      </Link>
       <UserInfo>
         <UserIcon>U</UserIcon>
         <UserTextWrap>
