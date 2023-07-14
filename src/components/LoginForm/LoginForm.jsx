@@ -10,8 +10,8 @@ import {
   LoginBtnBlock,
   ErrorText,
 } from './LoginForm.styled';
-import firebase from 'firebase/compat/app';
-import { addUser} from '../../service/FirebaseApi';
+// import firebase from 'firebase/compat/app';
+import { addUser, logInUser} from '../../service/FirebaseApi';
 import 'firebase/compat/auth';
 
 const LoginForm = () => {
@@ -19,26 +19,12 @@ const LoginForm = () => {
   const passwordlID = shortid.generate();
 
   const signUp = obj => {
-    // db.ref('users').push(obj);
     addUser(obj);
   };
   const logIn = obj => {
-    const { email, password } = obj;    
-    firebase
-    .auth()
-    .signInWithEmailAndPassword(email, password)
-    .then(userCredential => {
-      // Авторизация успешна
-      const user = userCredential.user;
-      console.log(user);
-    })
-    .catch(error => {
-      // Ошибка авторизации
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode, errorMessage);
-    });};
-
+    // const { email, password } = obj;
+    // const users = logInUser();
+  };
   return (
     <FormLayout>
       <p>Or log in using an email and password, after registering:</p>

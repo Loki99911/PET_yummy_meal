@@ -9,8 +9,8 @@ export const Layout = () => {
     <Container>
       <HeaderComp />
       <MainWraper>
-          <SideBarComp />
-               <Suspense fallback={<div>Loading...</div>}>
+        <SideBarComp />
+        <Suspense fallback={<div>Loading...</div>}>
           <Outlet />
         </Suspense>
       </MainWraper>
